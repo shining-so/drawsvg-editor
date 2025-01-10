@@ -1,15 +1,24 @@
+import './css/main.css';
+import './css/drawsvg.css';
+import './css/font-awesome.css';
+
 // The SVG Engine application, implements ISVGEngineApp
-var svgEngineApp = {};
+const svgEngineApp: any = {};
 
 // Notify SVG engine ready, init UI
 svgEngineApp.onSVGEngineLoad = function (engine) {
-  console.log("svgEngineApp.onSVGEngineLoad", engine);
+  //   console.log("svgEngineApp.onSVGEngineLoad", engine);
   svgEngineApp.engine = engine;
 };
 // Set main view implementation based on SVGEngineViews
 svgEngineApp.setMainView = function (mainView) {
-  console.log("svgEngineApp.setMainView", mainView);
+  //   console.log("svgEngineApp.setMainView", mainView);
   svgEngineApp.mainView = mainView;
+  //   h0b(N$b, b)
+};
+
+svgEngineApp.setDrawSvgLoadStringSVG = function (fn) {
+  svgEngineApp.drawSvgLoadStringSVG = fn;
 };
 
 svgEngineApp.showTaskMessage = function (msg) {
@@ -19,13 +28,13 @@ svgEngineApp.eraseTaskMessage = function () {
   svgEngineApp.mainView.eraseTaskMessage();
 };
 svgEngineApp.setTaskState = function (taskId, started) {
-  console.log("svgEngineApp.setTaskState ", taskId, started);
+  //   console.log("svgEngineApp.setTaskState ", taskId, started);
   // update button style
   // document.getElementById(taskId+"Btn").style.fontWeight=started ? "bold":"normal";
 };
 // Modified state change notification
 svgEngineApp.onModifiedStateChange = function (modifiedState) {
-  console.log("svgEngineApp.onModifiedStateChange ", modifiedState);
+  //   console.log("svgEngineApp.onModifiedStateChange ", modifiedState);
   //   // send to main process
   //   require("electron").ipcRenderer.send("modifiedState", modifiedState);
 };
@@ -106,18 +115,21 @@ svgEngineApp.getMarkerStyleView = function () {
   return svgEngineApp.mainView.getMarkerStyleView();
 };
 
+// @ts-ignore
 window.svgEngineApp = svgEngineApp;
 
 function startApp() {
-  const script = document.createElement("script");
-  script.src = "/drawsvg/edrawsvg/edrawsvg.nocache.js";
-  script.onload = function () {
-    console.log("SVG Engine loaded");
-  };
-  document.head.appendChild(script);
+  if (!document.getElementById("edrawsvg")) {
+    const script = document.createElement("script");
+    script.id = "edrawsvg";
+    script.src = "/drawsvg/edrawsvg/edrawsvg.nocache.js";
+    script.onload = function () {
+      console.log("SVG Engine loaded");
+    };
+    document.head.appendChild(script);
+  }
 }
 
 startApp();
-setTimeout(() => {
-  console.log(svgEngineApp);
-}, 1200);
+
+// drawSvgLoadStringSVG  hZd
