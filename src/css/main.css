@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "YOUSHEhaoshenti";
+  src: url(/fonts/YOUSHEhaoshenti.ttf) format("truetype");
+}
+
 .showlist h2 {
   font-size: larger;
   font-weight: bold;
@@ -8,13 +13,10 @@
 }
 .showlist li {
   list-style-type: none;
-  background: url(svg92.svg) no-repeat left 50%;
+  /* background: url(svg92.svg) no-repeat left 50%; */
   padding-left: 14pt;
   font-style: italic;
   font-size: larger;
-  //font-size: 12pt;
-  //margin-left: 10pt;
-  //line-height:14pt;
 }
 #crayon {
   float: right;
@@ -22,7 +24,6 @@
   margin-right: 0px;
   height: 80px;
   width: 280px;
-  //border: 1px solid rgba(0,0,0,.25);
 }
 
 .cardTool img {
@@ -40,7 +41,6 @@
 
 .img-1 a img {
   width: 60px;
-  //border: 2px solid rgba(0,0,0,.25);
 }
 .img-1 img:hover {
   -webkit-transform: scale(1.25);
@@ -56,7 +56,7 @@
   padding: 0;
 }
 .keyfeature li {
-  background: url(checkmark.svg) no-repeat left 50%;
+  /* background: url(checkmark.svg) no-repeat left 50%; */
   padding-left: 16pt;
   list-style-type: none;
   background-position: 0 4px;
@@ -73,7 +73,7 @@
 }
 .link {
   font-weight: bold;
-  background: url(svg44.svg) no-repeat left 50%;
+  /* background: url(svg44.svg) no-repeat left 50%; */
   padding-left: 20pt;
 }
 
