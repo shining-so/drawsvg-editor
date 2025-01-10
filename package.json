@@ -12,27 +12,12 @@
   "version": "10.0.0",
   "author": "joseph LIARD",
   "scripts": {
-    "start": "electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": "https://github.com/DRAWSVG/drawsvg-editor",  
-  "build": {
-    "appId": "com.github.drawsvg.editor",
-    "asar": true,
-    "win": {
-      "icon": "build/jay-rond.png"
-    },
-    "directories": {
-      "buildResources": "build",
-      "output": "dist"
-    }
-  },
-  "dependencies": {
-    "update-electron-app": "^2.0.1"
-  },
+  "repository": "https://github.com/DRAWSVG/drawsvg-editor",
   "devDependencies": {
-    "electron": "11.0.0-beta.20",
-    "electron-builder": "^22.9.1"
+    "vite": "^6.0.7"
   }
 }
