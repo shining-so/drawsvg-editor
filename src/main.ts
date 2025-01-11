@@ -122,7 +122,7 @@ function startApp() {
   if (!document.getElementById("edrawsvg")) {
     const script = document.createElement("script");
     script.id = "edrawsvg";
-    script.src = "/drawsvg/edrawsvg/edrawsvg.nocache.js";
+    script.src = "/edrawsvg/edrawsvg.nocache.js";
     script.onload = function () {
       console.log("SVG Engine loaded");
     };
