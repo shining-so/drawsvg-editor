@@ -3,6 +3,11 @@
   src: url(/fonts/YOUSHEhaoshenti.ttf) format("truetype");
 }
 
+.GAFGIWKDCJ g text {
+  mix-blend-mode: difference; 
+  fill: white;
+}
+
 .showlist h2 {
   font-size: larger;
   font-weight: bold;
