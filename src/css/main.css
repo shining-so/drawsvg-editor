@@ -4,8 +4,18 @@
 }
 
 .GAFGIWKDCJ g text {
-  mix-blend-mode: difference; 
+  mix-blend-mode: difference;
   fill: white;
+}
+
+.w3-theme-l5 > div:nth-child(3) {
+  visibility: hidden;
+}
+.w3-theme-l5 > div:nth-child(4) {
+  left: 26px !important;
+}
+.w3-theme-l5 > div:nth-child(5) {
+  inset: 32px 0px 36px 36px !important;
 }
 
 .showlist h2 {
